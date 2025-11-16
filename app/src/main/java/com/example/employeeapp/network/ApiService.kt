@@ -1,9 +1,12 @@
 package com.example.employeeapp.network
 
+import com.example.employeeapp.model.CreateEmployeeRequest
 import com.example.employeeapp.model.DetailEmployeeResponse
 import com.example.employeeapp.model.EmployeeResponse
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
@@ -14,5 +17,10 @@ interface ApiService {
     @GET("employee/{id}")
     fun getEmployeeDetail(
         @Path("id") id: Int
+    ): Call<DetailEmployeeResponse>
+
+    @POST("create")
+    fun createEmployee(
+        @Body body: CreateEmployeeRequest
     ): Call<DetailEmployeeResponse>
 }
