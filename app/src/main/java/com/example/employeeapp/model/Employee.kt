@@ -7,12 +7,12 @@ data class Employee(
     @SerializedName(value = "id")
     val id: Int,
 
-    @SerializedName(value = "employee_name")
+    @SerializedName(value = "name")
     val name: String,
 
-    @SerializedName(value = "employee_salary")
+    @SerializedName(value = "salary")
     val salary: Int,
 
-    @SerializedName(value = "employee_age")
+    @SerializedName(value = "age")
     val age: Int
 )

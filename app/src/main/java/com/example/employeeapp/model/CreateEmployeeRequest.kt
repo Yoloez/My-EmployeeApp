@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class CreateEmployeeRequest (
     @SerializedName("name")
-    val employeeName: String,
+    val name: String,
 
     @SerializedName("age")
     val age: Int,
